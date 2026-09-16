@@ -4,6 +4,7 @@ from rest_framework import status
 from .models import Libro
 from .serializers import LibroSerializer
 from rest_framework import viewsets
+from django.http import HttpResponse
 
 """
 class LibroListView(APIView):
@@ -51,6 +52,8 @@ class LibroListView(APIView):
             'autor': libro.autor
         }, status=status.HTTP_201_CREATED)
 """
+def inicio(request):
+    return HttpResponse('<h1>Hola mundoz</h1>')
 
 
 class LibroViewSet(viewsets.ModelViewSet):
