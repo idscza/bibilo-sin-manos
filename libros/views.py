@@ -53,7 +53,8 @@ class LibroListView(APIView):
         }, status=status.HTTP_201_CREATED)
 """
 def inicio(request):
-    return HttpResponse('<h1>Hola mundoz</h1>')
+    return HttpResponse('<h1>Hola amiguitos</h1>' \
+    '<h3>Para acceder al api, entra a /api/libros/')
 
 
 class LibroViewSet(viewsets.ModelViewSet):
